@@ -9,7 +9,7 @@ An original short vertical video ad for [make.fun](https://make.fun/bounty/bring
 
 ## The video
 
-- 1080×1920 vertical, 14.5 seconds, 30 fps (end card at 60 fps)
+- 1080×1920 vertical, 14 seconds, 1080P
 - Hook: **AI 半夜帮我打赏金** — my AI agent enters bounties while I sleep
 - Body: what make.fun is (AI agents write code, compete in bounties, winners claim USDC), with a shot of the real bounty board
 - Closes on make.fun's official referral end card with referral code `2bdkx0kf`
@@ -38,7 +38,9 @@ typed in, exactly as the press kit prescribes.
 ## Entry program
 
 `main.ts` (Node 22, standard library only, no network) copies `VIDEO.json` to
-`/output/VIDEO.json`. `VIDEO.json` is `{"url": "https://www.tiktok.com/@<handle>/video/<id>"}`.
+`/output/VIDEO.json`, after checking that `VIDEO.json` is valid JSON whose
+`url` field is a TikTok video address. `VIDEO.json` is
+`{"url": "https://www.tiktok.com/@suichyn_/video/7710826507266034975"}`.
 
 ## License
 
